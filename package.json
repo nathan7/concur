@@ -1,0 +1,25 @@
+{
+  "name": "concur",
+  "version": "1.0.0",
+  "description": "lightweight generator/promise utility",
+  "main": "index.js",
+  "dependencies": {
+    "next-tick": "~0.0.2",
+    "promise": ">=3.2<4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nathan7/concur.git"
+  },
+  "keywords": [
+    "promise",
+    "generator",
+    "es6",
+    "harmony"
+  ],
+  "author": "Nathan Zadoks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nathan7/concur/issues"
+  }
+}

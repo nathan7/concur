@@ -1,0 +1,22 @@
+{
+  "name": "concur",
+  "repo": "nathan7/concur",
+  "description": "lightweight generator/promise utility",
+  "version": "1.0.0",
+  "keywords": [
+    "promise",
+    "generator",
+    "es6",
+    "harmony"
+  ],
+  "dependencies": {
+    "then/promise": "*",
+    "timoxley/next-tick": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
