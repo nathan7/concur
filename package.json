@@ -4,7 +4,7 @@
   "description": "lightweight generator/promise utility",
   "main": "index.js",
   "dependencies": {
-    "next-tick": "~0.0.2",
+    "next-tick": "timoxley/next-tick",
     "promise": ">=3.2<4"
   },
   "repository": {
