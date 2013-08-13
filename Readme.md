@@ -31,6 +31,10 @@ $('#button').click(Concur(function*() {
 }))
 ```
 
+#### Concur.run(function\*())
+
+  Equivalent to `Concur(fn)()`.
+
 ## License
 
   MIT

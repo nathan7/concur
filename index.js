@@ -18,3 +18,5 @@ function Concur(Gen) {
     function failure(value) { return proceed(gen.throw(value)) }
   }
 }
+
+exports.run = function(Gen) { return Concur(Gen)() }
