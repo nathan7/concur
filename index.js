@@ -2,7 +2,7 @@
 var Promise = require('promise')
 var nextTick = require('next-tick')
 
-module.exports = exports =
+module.exports = exports = Concur
 function Concur(Gen) {
   return function() {
     var gen = Gen.apply(this, arguments)
