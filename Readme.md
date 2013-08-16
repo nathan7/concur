@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/nathan7/concur.png?branch=master)](https://travis-ci.org/nathan7/concur)
 
 # concur
 
