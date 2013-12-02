@@ -1,4 +1,3 @@
-
 # concur [![Build Status](https://travis-ci.org/nathan7/concur.png?branch=master)](https://travis-ci.org/nathan7/concur)
 
   lightweight generator/promise utility
@@ -38,3 +37,5 @@ $('#button').click(Concur(function*() {
 ## License
 
   MIT
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nathan7/concur/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
