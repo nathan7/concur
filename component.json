@@ -10,8 +10,7 @@
     "harmony"
   ],
   "dependencies": {
-    "then/promise": "*",
-    "timoxley/next-tick": "*"
+    "then/promise": "*"
   },
   "development": {},
   "license": "MIT",

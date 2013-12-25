@@ -1,6 +1,5 @@
 'use strict';
 var Promise = require('promise')
-var nextTick = require('next-tick')
 
 module.exports = exports = Concur
 function Concur(Gen) {
