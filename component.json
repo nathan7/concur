@@ -2,7 +2,7 @@
   "name": "concur",
   "repo": "nathan7/concur",
   "description": "lightweight generator/promise utility",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "keywords": [
     "promise",
     "generator",
