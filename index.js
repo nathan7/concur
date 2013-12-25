@@ -1,7 +1,7 @@
 'use strict';
+module.exports = Concur
 var Promise = require('promise')
 
-module.exports = exports = Concur
 function Concur(Gen) {
   return function() {
     var gen = Gen.apply(this, arguments)
@@ -17,5 +17,15 @@ function Concur(Gen) {
     function failure(value) { return proceed(gen.throw(value)) }
   }
 }
+Concur.run = function(Gen) { return Concur(Gen)() }
 
-exports.run = function(Gen) { return Concur(Gen)() }
+Concur.sync = Sync
+function Sync(Gen) {
+  return function() {
+    var gen = Gen.apply(this, arguments)
+      , ret = { value: undefined, done: false }
+    do { ret = gen.next(ret.value) } while (!ret.done)
+    return ret.value
+  }
+}
+Sync.run = function(Gen) { return Sync(Gen)() }

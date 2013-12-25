@@ -34,6 +34,15 @@ $('#button').click(Concur(function*() {
 
   Equivalent to `Concur(fn)()`.
 
+### Sync(function\*(...)) - > function(...)
+
+  A shim that just passes yielded values back in.
+  The synchronous analogue of Concur.
+
+#### Sync.run(function\*())
+
+  Equivalent to `Sync(fn)()`.
+
 ## License
 
   MIT
