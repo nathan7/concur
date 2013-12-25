@@ -38,6 +38,8 @@ $('#button').click(Concur(function*() {
 
   A shim that just passes yielded values back in.
   The synchronous analogue of Concur.
+  Given a synchronous analogue of Concur and synchronous analogues of the other stuff you use, you can really easily implement sync and async versions of your code in one go.
+  For an example, see [mkdirp.js](mkdirp.js).
 
 #### Sync.run(function\*())
 
