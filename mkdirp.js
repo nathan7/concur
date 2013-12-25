@@ -1,3 +1,4 @@
+'use strict';
 var Path = require('path')
   , Promise = require('promise')
   , Concur = require('concur')
