@@ -34,7 +34,7 @@ function mkdirpFactory(Concur, fs) {
         if (!stat.isDirectory()) throw err0
       }
     }
-    
+
     return made
   })
 }
