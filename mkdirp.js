@@ -1,4 +1,5 @@
 'use strict';
+// credit where credit is due: this is @ForbesLindesay's mkdirp example in alagator almost verbatim - https://github.com/ForbesLindesay/alagator#example
 var Path = require('path')
   , Promise = require('promise')
   , Concur = require('concur')
