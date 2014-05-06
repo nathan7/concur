@@ -8,7 +8,7 @@ function Concur(Gen) {
     return proceed({ value: undefined, done: false })
 
     function proceed(state) {
-      var prom = Promise.from(state.value)
+      var prom = Promise.resolve(state.value)
       return state.done
         ? prom
         : prom.then(success, failure)
