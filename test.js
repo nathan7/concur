@@ -21,14 +21,14 @@ describe('Concur', function() {
   })
 
   it('should resolve with return values', function() {
-    var prom = Promise.from(sentinel)
+    var prom = Promise.resolve(sentinel)
     return Concur.run(function*() {
       return prom
     }).should.become(sentinel)
   })
 
   it('should resolve promises with yield', function() {
-    var prom = Promise.from(sentinel)
+    var prom = Promise.resolve(sentinel)
     return Concur.run(function*() {
       ;(yield prom).should.equal(sentinel)
     })
@@ -43,7 +43,7 @@ describe('Concur', function() {
   it('should throw rejections', function() {
     return Concur.run(function*() {
       try {
-        yield Promise(function() { throw sentinelError })
+        yield new Promise(function() { throw sentinelError })
       }
       catch(e) {
         if (e === sentinelError)
