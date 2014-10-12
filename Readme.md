@@ -49,4 +49,3 @@ $('#button').click(Concur(function*() {
 
   MIT
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nathan7/concur/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
