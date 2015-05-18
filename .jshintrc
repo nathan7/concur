@@ -4,5 +4,8 @@
   "laxbreak": true,
   "globalstrict": true,
   "strict": true,
-  "global": { "require": true, "module": true }
+  "globals": { "require": true, "module": true },
+  "newcap": false,
+  "-W079": true,
+  "-W124": true
 }

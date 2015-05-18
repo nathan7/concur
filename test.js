@@ -1,7 +1,7 @@
+'use strict';//jshint esnext:true
+/* global beforeEach, describe, it */
 var chai = require('chai')
   , should = chai.should()
-require('mocha-as-promised')()
-chai.use(require('chai-as-promised'))
 
 var Concur = require('./')
   , Sync = Concur.sync
@@ -20,28 +20,34 @@ describe('Concur', function() {
     Concur.run(function*() {}).should.be.an.instanceof(Promise)
   })
 
-  it('should resolve with return values', function() {
+  it('should resolve with return values', function(done) {
     var prom = Promise.resolve(sentinel)
-    return Concur.run(function*() {
+    Concur.run(function*() {
       return prom
-    }).should.become(sentinel)
+    }).then(function(ret) {
+      should.equal(ret, sentinel)
+    }).nodeify(done)
   })
 
-  it('should resolve promises with yield', function() {
+  it('should resolve promises with yield', function(done) {
     var prom = Promise.resolve(sentinel)
-    return Concur.run(function*() {
+    Concur.run(function*() {
       ;(yield prom).should.equal(sentinel)
-    })
+    }).nodeify(done)
   })
 
-  it('should reject with thrown errors', function() {
-    return Concur.run(function*() {
+  it('should reject with thrown errors', function(done) {
+    Concur.run(function*() {
       throw sentinelError
-    }).should.be.rejected.with(sentinelError)
+    }).then(function() {
+      throw new Error("should've been rejected")
+    }, function(err) {
+      should.equal(err, sentinelError)
+    }).nodeify(done)
   })
 
-  it('should throw rejections', function() {
-    return Concur.run(function*() {
+  it('should throw rejections', function(done) {
+    Concur.run(function*() {
       try {
         yield new Promise(function() { throw sentinelError })
       }
@@ -49,7 +55,9 @@ describe('Concur', function() {
         if (e === sentinelError)
           return sentinel
       }
-    }).should.become(sentinel)
+    }).then(function(ret) {
+      should.equal(ret, sentinel)
+    }).nodeify(done)
   })
 })
 
