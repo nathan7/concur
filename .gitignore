@@ -1,4 +1,4 @@
-node_modules
-npm-debug.log
-components
-build
+/node_modules
+/npm-debug.log
+/components
+/build
