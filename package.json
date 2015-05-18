@@ -22,10 +22,12 @@
     "url": "https://github.com/nathan7/concur/issues"
   },
   "devDependencies": {
+    "chai": "~1.7.2",
+    "has-generators": "^1.0.1",
     "mocha": "~1.12.0",
-    "chai": "~1.7.2"
+    "regenerator": "^0.8.26"
   },
   "scripts": {
-    "test": "mocha -R spec --harmony-generators"
+    "test": "regenerator -r test.es6.js > test.es5.js && mocha -R spec"
   }
 }

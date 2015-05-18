@@ -2,3 +2,4 @@
 /npm-debug.log
 /components
 /build
+*.es5.js
