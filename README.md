@@ -43,5 +43,5 @@ $('#button').click(Concur(function*() {
 
 ## License
 
-  MIT
+  ISC
 
