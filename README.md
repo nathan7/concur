@@ -4,7 +4,7 @@
 
 ## Installation
 
-    $ npm install concur
+    $ npm install then-concur
 
 ## Example
 
