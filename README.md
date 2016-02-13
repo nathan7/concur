@@ -6,10 +6,6 @@
 
     $ npm install concur
 
-  or
-
-    $ component install nathan7/concur
-
 ## Example
 
 ## API
