@@ -1,6 +1,6 @@
 {
   "name": "then-concur",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "lightweight generator/promise utility",
   "main": "index.js",
   "dependencies": {
