@@ -22,9 +22,9 @@
     "url": "https://github.com/nathan7/concur/issues"
   },
   "devDependencies": {
-    "chai": "~1.7.2",
+    "chai": "^3.5.0",
     "has-generators": "^1.0.1",
-    "mocha": "~1.12.0",
+    "mocha": "^2.4.5",
     "regenerator": "^0.8.26"
   },
   "scripts": {
